@@ -1,4 +1,8 @@
-DATA_PATH = "data/raw/Pima_Diabetes.csv"
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+DATA_PATH = PROJECT_ROOT / "data" / "raw" / "Pima_Diabetes.csv"
 TARGET_COLUMN = "Class"
 
 RANDOM_STATE = 42
@@ -15,7 +19,7 @@ NUMERIC_FEATURES = [
     "Age",
 ]
 
-OUTPUT_FIGURES_DIR = "outputs/figures"
-OUTPUT_METRICS_DIR = "outputs/metrics"
-OUTPUT_TABLES_DIR = "outputs/tables"
-OUTPUT_MODELS_DIR = "outputs/models"
+OUTPUT_FIGURES_DIR = PROJECT_ROOT / "outputs" / "figures"
+OUTPUT_METRICS_DIR = PROJECT_ROOT / "outputs" / "metrics"
+OUTPUT_TABLES_DIR = PROJECT_ROOT / "outputs" / "tables"
+OUTPUT_MODELS_DIR = PROJECT_ROOT / "outputs" / "models"
